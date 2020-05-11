@@ -13,24 +13,28 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text("my first app"),
         centerTitle: true,
-        backgroundColor: Colors.blue[700],
+        backgroundColor: Colors.green[700],
       ),
-      body: Center(
-        child: Text(
-          "Hello Ninjas!",
-          style: TextStyle(
-              fontSize: 22.0,
-              fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.grey[600],
-              fontFamily: 'Livvic'
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: <Widget>[
+          Text("Hello! World"),
+          RaisedButton(
+            onPressed: (){},
+            child: Text("Click me"),
+            color: Colors.cyan,
           ),
-        ),
+          Container(
+            padding: EdgeInsets.all(30.0),
+            color: Colors.grey,
+            child: Text("I'm inside container"),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text("click!"),
-        backgroundColor: Colors.blue[600],
+        onPressed: (){},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.green[400],
       ),
     );
   }
